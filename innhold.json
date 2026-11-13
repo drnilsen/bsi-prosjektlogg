@@ -1,53 +1,204 @@
 {
-  "oppdatert": "2026-11-13T09:00",
-  "melding": "Første utgave av prosjektloggen.",
+  "oppdatert": "2026-11-13T09:50",
+  "melding": "R og RStudio er på plass i analyserommet.",
   "status": "Analyseverktøyet er bygget og prøvd på et testuttrekk. Nå kartlegges strukturen i dataene, slik at verktøyet kan rettes mot de reelle tabellene før fullt uttrekk bestilles.",
   "faser": [
-    {"navn": "Godkjenninger", "status": "ferdig", "tekst": "REK, personvernvurdering og datatilgang"},
-    {"navn": "Kartlegging av laboratoriene", "status": "ferdig", "tekst": "Alle ti sykehus har svart"},
-    {"navn": "Definisjoner og regler", "status": "ferdig", "tekst": "Episode, virkende og optimal behandling"},
-    {"navn": "Analyseverktøy", "status": "pagar", "tekst": "Bygges og prøves på testdata"},
-    {"navn": "Testuttrekk", "status": "pagar", "tekst": "Strukturen i dataene kartlegges"},
-    {"navn": "Fullt uttrekk", "status": "senere", "tekst": "Alle episoder siden Helseplattformen ble innført"},
-    {"navn": "Analyse", "status": "senere", "tekst": "Tid til behandling og utfall"},
-    {"navn": "Publisering", "status": "senere", "tekst": "Artikkel og tilbakemelding til sykehusene"}
+    {
+      "navn": "Godkjenninger",
+      "status": "ferdig",
+      "tekst": "REK, personvernvurdering og datatilgang"
+    },
+    {
+      "navn": "Kartlegging av laboratoriene",
+      "status": "ferdig",
+      "tekst": "Alle ti sykehus har svart"
+    },
+    {
+      "navn": "Definisjoner og regler",
+      "status": "ferdig",
+      "tekst": "Episode, virkende og optimal behandling"
+    },
+    {
+      "navn": "Analyseverktøy",
+      "status": "pagar",
+      "tekst": "Bygges og prøves på testdata"
+    },
+    {
+      "navn": "Testuttrekk",
+      "status": "pagar",
+      "tekst": "Strukturen i dataene kartlegges"
+    },
+    {
+      "navn": "Fullt uttrekk",
+      "status": "senere",
+      "tekst": "Alle episoder siden Helseplattformen ble innført"
+    },
+    {
+      "navn": "Analyse",
+      "status": "senere",
+      "tekst": "Tid til behandling og utfall"
+    },
+    {
+      "navn": "Publisering",
+      "status": "senere",
+      "tekst": "Artikkel og tilbakemelding til sykehusene"
+    }
   ],
   "steg": [
-    {"gruppe": "pagar", "tittel": "Kartlegge strukturen i testuttrekket", "hvem": "Prosjektleder", "tekst": "Et eget skript beskriver tabellene i analyserommet: nøkler, tidspunkt, utfylling og hvordan tabellene henger sammen. Rapporten inneholder bare struktur og tall på gruppenivå og kan tas ut."},
-    {"gruppe": "pagar", "tittel": "Nytt syntetisk datasett", "hvem": "Prosjektleder", "tekst": "Bygges fra strukturrapporten, slik at verktøyet kan utvikles og prøves utenfor analyserommet på data som ligner de reelle tabellene."},
-
-    {"gruppe": "bidra", "tittel": "Faglig gjennomgang av reglene for optimal behandling", "hvem": "Infeksjonsmedisiner eller klinisk mikrobiolog", "tekst": "Regelfilene oversetter retningslinjen «Antibiotika i sykehus» til regler per agens, fokus, resistens, nyrefunksjon og allergi. De trenger et kritisk blikk fra noen som ikke har skrevet dem."},
-    {"gruppe": "bidra", "tittel": "Kontrollere opplysningene om eget sykehus", "hvem": "Kontaktperson ved hvert sykehus", "tekst": "Åpningstider i laboratoriet, rutiner for varsling av positive blodkulturer og tilgang til infeksjonsmedisiner inngår som forklaringsvariabler. Tabellen bygger på kartleggingssvarene og bør leses gjennom lokalt."},
-    {"gruppe": "bidra", "tittel": "Gjennomgå analyseskriptet mot protokollen", "hvem": "Statistiker", "tekst": "Skriptet i R er skrevet for Fine–Gray-modeller med sykehus som tilfeldig effekt og tid til virkende behandling som tidsavhengig eksponering i dødelighetsmodellen. Det er ikke kjørt på reelle data ennå."},
-    {"gruppe": "bidra", "tittel": "Informasjonsside om prosjektet", "hvem": "Prosjektleder, kommunikasjon og personvernombud", "tekst": "Pasientene skal kunne lese om prosjektet på helseforetakenes nettsider: formål, hvilke opplysninger som brukes, lagringstid, rettigheter og hvem de kan kontakte."},
-
-    {"gruppe": "venter", "tittel": "Nytt og større testuttrekk", "hvem": "Helseplattformen", "tekst": "Det første testuttrekket dekket ikke alle sykehusene, og noen laboratorietabeller var ufullstendige. Neste uttrekk skal ha med alle ti sykehus."},
-    {"gruppe": "venter", "tittel": "Tidligere versjoner av retningslinjen", "hvem": "Helsedirektoratet og KAS", "tekst": "Retningslinjen er revidert i studieperioden. Behandlingen skal vurderes mot den versjonen som gjaldt da pasienten ble behandlet."},
-    {"gruppe": "venter", "tittel": "R og RStudio i analyserommet", "hvem": "Helsedatasenteret", "tekst": "De statistiske modellene kjøres i R. Programvaren er bestilt."},
-
-    {"gruppe": "senere", "tittel": "Verktøy for blindet klassifisering", "hvem": "To kliniske mikrobiologer", "tekst": "Et utvalg episoder klassifiseres manuelt uten kjennskap til regelmotorens svar. Slik valideres reglene."},
-    {"gruppe": "senere", "tittel": "Protokoll versjon 2.0", "hvem": "Prosjektleder", "tekst": "Definisjonsbeslutningene skrives inn i protokollen, og endringen meldes til REK der det kreves."},
-    {"gruppe": "senere", "tittel": "Fullt uttrekk og hovedanalyse", "hvem": "Prosjektgruppen", "tekst": "Bestilles når verktøyet gir riktige svar på testuttrekket."}
+    {
+      "gruppe": "pagar",
+      "tittel": "Kartlegge strukturen i testuttrekket",
+      "hvem": "Prosjektleder",
+      "tekst": "Et eget skript beskriver tabellene i analyserommet: nøkler, tidspunkt, utfylling og hvordan tabellene henger sammen. Rapporten inneholder bare struktur og tall på gruppenivå og kan tas ut."
+    },
+    {
+      "gruppe": "pagar",
+      "tittel": "Nytt syntetisk datasett",
+      "hvem": "Prosjektleder",
+      "tekst": "Bygges fra strukturrapporten, slik at verktøyet kan utvikles og prøves utenfor analyserommet på data som ligner de reelle tabellene."
+    },
+    {
+      "gruppe": "bidra",
+      "tittel": "Faglig gjennomgang av reglene for optimal behandling",
+      "hvem": "Infeksjonsmedisiner eller klinisk mikrobiolog",
+      "tekst": "Regelfilene oversetter retningslinjen «Antibiotika i sykehus» til regler per agens, fokus, resistens, nyrefunksjon og allergi. De trenger et kritisk blikk fra noen som ikke har skrevet dem."
+    },
+    {
+      "gruppe": "bidra",
+      "tittel": "Kontrollere opplysningene om eget sykehus",
+      "hvem": "Kontaktperson ved hvert sykehus",
+      "tekst": "Åpningstider i laboratoriet, rutiner for varsling av positive blodkulturer og tilgang til infeksjonsmedisiner inngår som forklaringsvariabler. Tabellen bygger på kartleggingssvarene og bør leses gjennom lokalt."
+    },
+    {
+      "gruppe": "bidra",
+      "tittel": "Gjennomgå analyseskriptet mot protokollen",
+      "hvem": "Statistiker",
+      "tekst": "Skriptet i R er skrevet for Fine–Gray-modeller med sykehus som tilfeldig effekt og tid til virkende behandling som tidsavhengig eksponering i dødelighetsmodellen. Det er ikke kjørt på reelle data ennå."
+    },
+    {
+      "gruppe": "bidra",
+      "tittel": "Informasjonsside om prosjektet",
+      "hvem": "Prosjektleder, kommunikasjon og personvernombud",
+      "tekst": "Pasientene skal kunne lese om prosjektet på helseforetakenes nettsider: formål, hvilke opplysninger som brukes, lagringstid, rettigheter og hvem de kan kontakte."
+    },
+    {
+      "gruppe": "venter",
+      "tittel": "Nytt og større testuttrekk",
+      "hvem": "Helseplattformen",
+      "tekst": "Det første testuttrekket dekket ikke alle sykehusene, og noen laboratorietabeller var ufullstendige. Neste uttrekk skal ha med alle ti sykehus."
+    },
+    {
+      "gruppe": "venter",
+      "tittel": "Tidligere versjoner av retningslinjen",
+      "hvem": "Helsedirektoratet og KAS",
+      "tekst": "Retningslinjen er revidert i studieperioden. Behandlingen skal vurderes mot den versjonen som gjaldt da pasienten ble behandlet."
+    },
+    {
+      "gruppe": "pagar",
+      "tittel": "Installere R-pakkene i analyserommet",
+      "hvem": "Prosjektleder",
+      "tekst": "R og RStudio er på plass i analyserommet. Pakkene for overlevelsesanalyse, blandede modeller og imputasjon gjenstår før analyseskriptet kan prøves."
+    },
+    {
+      "gruppe": "senere",
+      "tittel": "Verktøy for blindet klassifisering",
+      "hvem": "To kliniske mikrobiologer",
+      "tekst": "Et utvalg episoder klassifiseres manuelt uten kjennskap til regelmotorens svar. Slik valideres reglene."
+    },
+    {
+      "gruppe": "senere",
+      "tittel": "Protokoll versjon 2.0",
+      "hvem": "Prosjektleder",
+      "tekst": "Definisjonsbeslutningene skrives inn i protokollen, og endringen meldes til REK der det kreves."
+    },
+    {
+      "gruppe": "senere",
+      "tittel": "Fullt uttrekk og hovedanalyse",
+      "hvem": "Prosjektgruppen",
+      "tekst": "Bestilles når verktøyet gir riktige svar på testuttrekket."
+    }
   ],
   "innlegg": [
-    {"dato": "2026-11-13", "tittel": "Skript som kartlegger dataene uten å ta dem ut", "merke": "Verktøy",
-     "tekst": ["Vi har flere ganger endt i usikkerhet om hvordan tabellene i uttrekket faktisk er bygget opp. Nå er det laget et skript som kjøres i analyserommet og beskriver strukturen: hva et blodkultursett er i dataene, om foreløpige svar ligger i tabellene, hvilke tidspunkt som er registrert av instrument og hvilke av personale, og hvilke kontakter som mangler i hvilke tabeller.", "Rapporten inneholder ingen ID-er, enkelttidspunkt eller enkeltrader. Før skriptet ble tatt i bruk, ble det gjennomgått av en uavhengig kontroll som plantet prøveverdier i testdata for å se om noe kunne lekke. Funnene ble rettet."]},
-    {"dato": "2026-11-12", "tittel": "Testuttrekket viser hva som må rettes før fullt uttrekk", "merke": "Data",
-     "tekst": ["Kjøringen på testuttrekket viste at laboratorietabellene ikke var komplette, og at ett av sykehusene manglet helt. Helseplattformen har forklart hvordan identifikasjon og resistensbestemmelse kobles sammen per isolat, og et nytt testuttrekk er under planlegging.", "Vi legger regelarbeidet til side en periode og konsentrerer oss om å forstå dataene."]},
-    {"dato": "2026-11-11", "tittel": "Svartid måles til første svar", "merke": "Definisjoner",
-     "tekst": ["Tid til identifikasjon og tid til resistenssvar regnes til første svar som er tilgjengelig for klinikeren, ikke til endelig svar. Det er første svar som kan endre behandlingen.", "Samme dag ble det tatt stilling til hvordan sju resistenskomponenter skal tolkes, blant annet screeningtester som bare gjelder enkelte arter."]},
-    {"dato": "2026-11-10", "tittel": "Analyseverktøyet kjørt i analyserommet for første gang", "merke": "Verktøy",
-     "tekst": ["Verktøyet leser uttrekksfilene, bygger episoder, vurderer behandlingen mot reglene og lager en resultatfil. Det kjører i nettleseren på maskinen i analyserommet og trenger ingen installasjon.", "Svarene fra kartleggingen av laboratoriene er lagt inn som forklaringsvariabler. Prøvetakingstidspunktet er tidsorigo i alle modeller, i tråd med protokollen."]},
-    {"dato": "2026-11-09", "tittel": "Utvikling på syntetiske data", "merke": "Verktøy",
-     "tekst": ["For å kunne utvikle utenfor analyserommet er det laget et syntetisk datasett med samme kolonner som uttrekket. Fordelingen av agens og resistens følger norske overvåkingsdata, slik at de vanligste forløpene er dekket."]},
-    {"dato": "2026-10-22", "tittel": "Definisjonene er besluttet", "merke": "Definisjoner",
-     "tekst": ["Tolv definisjoner er fastsatt: tidsorigo, episode, forurensning, virkende behandling, optimal behandling, endepunkter og statistisk modell.", "Tidsorigo er prøvetakingstidspunktet for første blodkultursett. Virkende behandling er første gitte dose av et middel agens er følsomt for. Optimal behandling er det smaleste regimet retningslinjen anbefaler, gitt fokus, agens, resistens, nyrefunksjon og allergi."]},
-    {"dato": "2026-10-15", "datotekst": "Oktober 2026", "tittel": "Første testuttrekk gjennomgått", "merke": "Data",
-     "tekst": ["Helseplattformen leverte et testuttrekk. Tabellene er gjennomgått kolonne for kolonne og beskrevet i et eget dokument, med en liste over spørsmål som måtte avklares."]},
-    {"dato": "2026-09-01", "datotekst": "Sommer og høst 2026", "tittel": "Alle ti sykehus har svart på kartleggingen", "merke": "Kartlegging",
-     "tekst": ["Sykehusene har beskrevet hvordan blodkulturer håndteres: hvor flaskene inkuberes, åpningstider, transport, metoder for hurtig identifikasjon og resistensbestemmelse, og hvordan positive funn varsles.", "Svarene brukes til å undersøke om forskjeller i laboratoriehåndtering henger sammen med tid til virkende behandling."]},
-    {"dato": "2026-05-19", "tittel": "Prosjektet er godkjent av REK", "merke": "Godkjenning",
-     "tekst": ["Regional komité for medisinsk og helsefaglig forskningsetikk har godkjent prosjektet med vilkår (søknad 981558). Godkjenningen gir fritak fra samtykkekravet. Opplysningene behandles pseudonymisert i Helsedatasenterets analyserom."]}
+    {
+      "dato": "2026-11-13",
+      "tittel": "Skript som kartlegger dataene uten å ta dem ut",
+      "merke": "Verktøy",
+      "tekst": [
+        "Vi har flere ganger endt i usikkerhet om hvordan tabellene i uttrekket faktisk er bygget opp. Nå er det laget et skript som kjøres i analyserommet og beskriver strukturen: hva et blodkultursett er i dataene, om foreløpige svar ligger i tabellene, hvilke tidspunkt som er registrert av instrument og hvilke av personale, og hvilke kontakter som mangler i hvilke tabeller.",
+        "Rapporten inneholder ingen ID-er, enkelttidspunkt eller enkeltrader. Før skriptet ble tatt i bruk, ble det gjennomgått av en uavhengig kontroll som plantet prøveverdier i testdata for å se om noe kunne lekke. Funnene ble rettet."
+      ]
+    },
+    {
+      "dato": "2026-11-12",
+      "tittel": "Testuttrekket viser hva som må rettes før fullt uttrekk",
+      "merke": "Data",
+      "tekst": [
+        "Kjøringen på testuttrekket viste at laboratorietabellene ikke var komplette, og at ett av sykehusene manglet helt. Helseplattformen har forklart hvordan identifikasjon og resistensbestemmelse kobles sammen per isolat, og et nytt testuttrekk er under planlegging.",
+        "Vi legger regelarbeidet til side en periode og konsentrerer oss om å forstå dataene."
+      ]
+    },
+    {
+      "dato": "2026-11-11",
+      "tittel": "Svartid måles til første svar",
+      "merke": "Definisjoner",
+      "tekst": [
+        "Tid til identifikasjon og tid til resistenssvar regnes til første svar som er tilgjengelig for klinikeren, ikke til endelig svar. Det er første svar som kan endre behandlingen.",
+        "Samme dag ble det tatt stilling til hvordan sju resistenskomponenter skal tolkes, blant annet screeningtester som bare gjelder enkelte arter."
+      ]
+    },
+    {
+      "dato": "2026-11-10",
+      "tittel": "Analyseverktøyet kjørt i analyserommet for første gang",
+      "merke": "Verktøy",
+      "tekst": [
+        "Verktøyet leser uttrekksfilene, bygger episoder, vurderer behandlingen mot reglene og lager en resultatfil. Det kjører i nettleseren på maskinen i analyserommet og trenger ingen installasjon.",
+        "Svarene fra kartleggingen av laboratoriene er lagt inn som forklaringsvariabler. Prøvetakingstidspunktet er tidsorigo i alle modeller, i tråd med protokollen."
+      ]
+    },
+    {
+      "dato": "2026-11-09",
+      "tittel": "Utvikling på syntetiske data",
+      "merke": "Verktøy",
+      "tekst": [
+        "For å kunne utvikle utenfor analyserommet er det laget et syntetisk datasett med samme kolonner som uttrekket. Fordelingen av agens og resistens følger norske overvåkingsdata, slik at de vanligste forløpene er dekket."
+      ]
+    },
+    {
+      "dato": "2026-10-22",
+      "tittel": "Definisjonene er besluttet",
+      "merke": "Definisjoner",
+      "tekst": [
+        "Tolv definisjoner er fastsatt: tidsorigo, episode, forurensning, virkende behandling, optimal behandling, endepunkter og statistisk modell.",
+        "Tidsorigo er prøvetakingstidspunktet for første blodkultursett. Virkende behandling er første gitte dose av et middel agens er følsomt for. Optimal behandling er det smaleste regimet retningslinjen anbefaler, gitt fokus, agens, resistens, nyrefunksjon og allergi."
+      ]
+    },
+    {
+      "dato": "2026-10-15",
+      "datotekst": "Oktober 2026",
+      "tittel": "Første testuttrekk gjennomgått",
+      "merke": "Data",
+      "tekst": [
+        "Helseplattformen leverte et testuttrekk. Tabellene er gjennomgått kolonne for kolonne og beskrevet i et eget dokument, med en liste over spørsmål som måtte avklares."
+      ]
+    },
+    {
+      "dato": "2026-09-01",
+      "datotekst": "Sommer og høst 2026",
+      "tittel": "Alle ti sykehus har svart på kartleggingen",
+      "merke": "Kartlegging",
+      "tekst": [
+        "Sykehusene har beskrevet hvordan blodkulturer håndteres: hvor flaskene inkuberes, åpningstider, transport, metoder for hurtig identifikasjon og resistensbestemmelse, og hvordan positive funn varsles.",
+        "Svarene brukes til å undersøke om forskjeller i laboratoriehåndtering henger sammen med tid til virkende behandling."
+      ]
+    },
+    {
+      "dato": "2026-05-19",
+      "tittel": "Prosjektet er godkjent av REK",
+      "merke": "Godkjenning",
+      "tekst": [
+        "Regional komité for medisinsk og helsefaglig forskningsetikk har godkjent prosjektet med vilkår (søknad 981558). Godkjenningen gir fritak fra samtykkekravet. Opplysningene behandles pseudonymisert i Helsedatasenterets analyserom."
+      ]
+    }
   ],
   "om": {
     "tittel": "Tid til virkende og optimal antibiotikabehandling ved blodbaneinfeksjoner",
@@ -57,11 +208,26 @@
       "Studien er retrospektiv og bruker strukturerte opplysninger fra Helseplattformen. Ti sykehus inngår."
     ],
     "fakta": [
-      ["Prosjektleder", "Einar Nilsen, Helse Møre og Romsdal"],
-      ["Forskningsansvarlig", "Helse Møre og Romsdal HF"],
-      ["Godkjenning", "REK midt, søknad 981558, 19. mai 2026"],
-      ["Datakilde", "Helseplattformen"],
-      ["Analyse", "Helsedatasenterets analyserom"]
+      [
+        "Prosjektleder",
+        "Einar Nilsen, Helse Møre og Romsdal"
+      ],
+      [
+        "Forskningsansvarlig",
+        "Helse Møre og Romsdal HF"
+      ],
+      [
+        "Godkjenning",
+        "REK midt, søknad 981558, 19. mai 2026"
+      ],
+      [
+        "Datakilde",
+        "Helseplattformen"
+      ],
+      [
+        "Analyse",
+        "Helsedatasenterets analyserom"
+      ]
     ],
     "personvern": "Denne siden inneholder ingen pasientopplysninger og ingen resultater. Alle data behandles i et sikkert analyserom, og bare tall på gruppenivå tas ut."
   }
