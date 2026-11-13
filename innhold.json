@@ -1,6 +1,6 @@
 {
-  "oppdatert": "2026-11-13T09:50",
-  "melding": "R og RStudio er på plass i analyserommet.",
+  "oppdatert": "2026-11-13T10:10",
+  "melding": "R er satt opp i analyserommet.",
   "status": "Analyseverktøyet er bygget og prøvd på et testuttrekk. Nå kartlegges strukturen i dataene, slik at verktøyet kan rettes mot de reelle tabellene før fullt uttrekk bestilles.",
   "faser": [
     {
@@ -73,7 +73,7 @@
       "gruppe": "bidra",
       "tittel": "Gjennomgå analyseskriptet mot protokollen",
       "hvem": "Statistiker",
-      "tekst": "Skriptet i R er skrevet for Fine–Gray-modeller med sykehus som tilfeldig effekt og tid til virkende behandling som tidsavhengig eksponering i dødelighetsmodellen. Det er ikke kjørt på reelle data ennå."
+      "tekst": "Skriptet i R er skrevet for Fine–Gray-modeller med sykehus som tilfeldig effekt og tid til virkende behandling som tidsavhengig eksponering i dødelighetsmodellen. R og pakkene er på plass i analyserommet, men skriptet er ikke kjørt på reelle data ennå."
     },
     {
       "gruppe": "bidra",
@@ -92,12 +92,6 @@
       "tittel": "Tidligere versjoner av retningslinjen",
       "hvem": "Helsedirektoratet og KAS",
       "tekst": "Retningslinjen er revidert i studieperioden. Behandlingen skal vurderes mot den versjonen som gjaldt da pasienten ble behandlet."
-    },
-    {
-      "gruppe": "pagar",
-      "tittel": "Installere R-pakkene i analyserommet",
-      "hvem": "Prosjektleder",
-      "tekst": "R og RStudio er på plass i analyserommet. Pakkene for overlevelsesanalyse, blandede modeller og imputasjon gjenstår før analyseskriptet kan prøves."
     },
     {
       "gruppe": "senere",
@@ -119,6 +113,14 @@
     }
   ],
   "innlegg": [
+    {
+      "dato": "2026-11-13",
+      "tittel": "R er satt opp i analyserommet",
+      "merke": "Verktøy",
+      "tekst": [
+        "R og RStudio er installert i analyserommet, med pakkene for overlevelsesanalyse, blandede modeller og imputasjon. Dermed kan analyseskriptet prøves på resultatfilene fra verktøyet."
+      ]
+    },
     {
       "dato": "2026-11-13",
       "tittel": "Skript som kartlegger dataene uten å ta dem ut",
