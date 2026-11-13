@@ -1,7 +1,7 @@
 {
-  "oppdatert": "2026-11-13T10:10",
-  "melding": "R er satt opp i analyserommet.",
-  "status": "Analyseverktøyet er bygget og prøvd på et testuttrekk. Nå kartlegges strukturen i dataene, slik at verktøyet kan rettes mot de reelle tabellene før fullt uttrekk bestilles.",
+  "oppdatert": "2026-11-13T15:30",
+  "melding": "Strukturrapporten er gjennomgått, og verktøyet er tilpasset.",
+  "status": "Strukturen i testuttrekket er kartlagt, og analyseverktøyet er tilpasset den. Neste steg er å prøve den nye versjonen i analyserommet og få et nytt, større testuttrekk.",
   "faser": [
     {
       "navn": "Godkjenninger",
@@ -21,12 +21,12 @@
     {
       "navn": "Analyseverktøy",
       "status": "pagar",
-      "tekst": "Bygges og prøves på testdata"
+      "tekst": "Tilpasset de reelle tabellene; prøves i analyserommet"
     },
     {
       "navn": "Testuttrekk",
       "status": "pagar",
-      "tekst": "Strukturen i dataene kartlegges"
+      "tekst": "Strukturen er kartlagt; nytt uttrekk bestilles"
     },
     {
       "navn": "Fullt uttrekk",
@@ -47,15 +47,15 @@
   "steg": [
     {
       "gruppe": "pagar",
-      "tittel": "Kartlegge strukturen i testuttrekket",
+      "tittel": "Prøve ny versjon av verktøyet i analyserommet",
       "hvem": "Prosjektleder",
-      "tekst": "Et eget skript beskriver tabellene i analyserommet: nøkler, tidspunkt, utfylling og hvordan tabellene henger sammen. Rapporten inneholder bare struktur og tall på gruppenivå og kan tas ut."
+      "tekst": "Verktøyet er bygget om etter strukturrapporten og gir riktige svar på syntetiske data med samme oppbygning. Nå må det kjøres på testuttrekket."
     },
     {
       "gruppe": "pagar",
-      "tittel": "Nytt syntetisk datasett",
+      "tittel": "Avklare om mottakstid er innsetting i instrument",
       "hvem": "Prosjektleder",
-      "tekst": "Bygges fra strukturrapporten, slik at verktøyet kan utvikles og prøves utenfor analyserommet på data som ligner de reelle tabellene."
+      "tekst": "Tiden fra prøvetaking til registrert mottak er kort. Kartleggingen viser den nå per sykehus, dag og natt, slik at vi ser om den kan brukes som mål på når flasken ble satt i blodkulturskapet."
     },
     {
       "gruppe": "bidra",
@@ -74,18 +74,6 @@
       "tittel": "Gjennomgå analyseskriptet mot protokollen",
       "hvem": "Statistiker",
       "tekst": "Skriptet i R er skrevet for Fine–Gray-modeller med sykehus som tilfeldig effekt og tid til virkende behandling som tidsavhengig eksponering i dødelighetsmodellen. R og pakkene er på plass i analyserommet, men skriptet er ikke kjørt på reelle data ennå."
-    },
-    {
-      "gruppe": "bidra",
-      "tittel": "Informasjonsside om prosjektet",
-      "hvem": "Prosjektleder, kommunikasjon og personvernombud",
-      "tekst": "Pasientene skal kunne lese om prosjektet på helseforetakenes nettsider: formål, hvilke opplysninger som brukes, lagringstid, rettigheter og hvem de kan kontakte."
-    },
-    {
-      "gruppe": "venter",
-      "tittel": "Nytt og større testuttrekk",
-      "hvem": "Helseplattformen",
-      "tekst": "Det første testuttrekket dekket ikke alle sykehusene, og noen laboratorietabeller var ufullstendige. Neste uttrekk skal ha med alle ti sykehus."
     },
     {
       "gruppe": "venter",
@@ -110,9 +98,39 @@
       "tittel": "Fullt uttrekk og hovedanalyse",
       "hvem": "Prosjektgruppen",
       "tekst": "Bestilles når verktøyet gir riktige svar på testuttrekket."
+    },
+    {
+      "gruppe": "venter",
+      "tittel": "Nytt og større testuttrekk",
+      "hvem": "Helseplattformen",
+      "tekst": "Neste uttrekk skal ha med alle ti sykehus og resultatene for flasker som dyrkes ved et annet sykehus enn der de ble tatt. Spørsmålene er sendt."
+    },
+    {
+      "gruppe": "venter",
+      "tittel": "Informasjonsside om prosjektet",
+      "hvem": "Forskningsseksjonen i helseforetaket",
+      "tekst": "Tekst til pasienter og pårørende er skrevet og sendt. Siden skal ligge på helseforetakets nettsider før fullt uttrekk bestilles."
     }
   ],
   "innlegg": [
+    {
+      "dato": "2026-11-13",
+      "tittel": "Strukturrapporten forklarer hva som manglet",
+      "merke": "Data",
+      "tekst": [
+        "Rapporten fra analyserommet avklarte flere ting vi har lurt på. Laboratorieresultatene manglet for flasker som inkuberes ved ett sykehus og dyrkes ved et annet, fordi dyrkningen da får et eget prøvenummer. Det er meldt til Helseplattformen.",
+        "Et blodkultursett har ingen egen nøkkel i dataene. Flaskene i et sett kjennes igjen på at de er tatt samtidig. Foreløpige svar er lagret som egne versjoner, så tid til første svar på identifikasjon og resistens kan måles slik vi har bestemt.",
+        "Analyseverktøyet er bygget om etter dette, og det er laget nye syntetiske data med samme oppbygning som de reelle tabellene."
+      ]
+    },
+    {
+      "dato": "2026-11-13",
+      "tittel": "Informasjon til pasientene er sendt til publisering",
+      "merke": "Godkjenning",
+      "tekst": [
+        "Prosjektet har fritak fra samtykke. Da skal pasientene kunne lese om prosjektet på helseforetakets nettsider: hva vi forsker på, hvilke opplysninger som brukes, hvor lenge de oppbevares og hvilke rettigheter de har. Teksten er skrevet for lesere uten fagbakgrunn og sendt til forskningsseksjonen."
+      ]
+    },
     {
       "dato": "2026-11-13",
       "tittel": "R er satt opp i analyserommet",
