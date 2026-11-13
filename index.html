@@ -1,0 +1,220 @@
+<!doctype html><html lang="nb"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Prosjektlogg">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="apple-touch-icon" href="icon-180.png"><link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0d4f63"><link rel="icon" href="icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+</head><body>
+<title>Prosjektlogg blodbaneinfeksjoner</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: én smal lesekolonne som i en app. Øverst en tidsakse over prosjektets
+   faser (studien måler tid, så fremdriften tegnes som en akse fra t0). */
+:root{
+  --bg:#f2f5f6; --flate:#ffffff; --blekk:#13242c; --dempet:#566770; --linje:#d5dee2;
+  --petrol:#0d4f63; --petrol-blekk:#ffffff; --petrol-svak:#dcebf0;
+  --rav:#8a5a00; --rav-svak:#fbefd3; --gronn:#1c6b45; --gronn-svak:#dcf0e4;
+  --gra-svak:#e7ecee;
+  --display:"Bricolage Grotesque","IBM Plex Sans",system-ui,sans-serif;
+  --tekst:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  --r:12px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e171b; --flate:#16232a; --blekk:#e6eef1; --dempet:#95a7af; --linje:#283a43;
+    --petrol:#6cc3dc; --petrol-blekk:#06202a; --petrol-svak:#17343f;
+    --rav:#efb65a; --rav-svak:#3a2c12; --gronn:#74cf9c; --gronn-svak:#173426;
+    --gra-svak:#1e2c33; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e171b; --flate:#16232a; --blekk:#e6eef1; --dempet:#95a7af; --linje:#283a43;
+  --petrol:#6cc3dc; --petrol-blekk:#06202a; --petrol-svak:#17343f;
+  --rav:#efb65a; --rav-svak:#3a2c12; --gronn:#74cf9c; --gronn-svak:#173426;
+  --gra-svak:#1e2c33; color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--blekk);font:16px/1.55 var(--tekst)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.ramme{max-width:720px;margin:0 auto;padding-block:0 56px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header.topp{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--linje)}
+.topp .ramme{padding-block:12px 0}
+.merke{font:500 11.5px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--petrol)}
+h1{font:700 21px/1.2 var(--display);margin:5px 0 0;letter-spacing:-.01em;text-wrap:balance}
+nav.faner{display:flex;gap:4px;margin-top:10px}
+nav.faner a{flex:1;text-align:center;text-decoration:none;color:var(--dempet);font-weight:500;font-size:15px;
+  padding:9px 6px 10px;border-bottom:3px solid transparent}
+nav.faner a[aria-current="page"]{color:var(--blekk);border-color:var(--petrol)}
+nav.faner .ant{font:500 11px/1 var(--mono);background:var(--petrol);color:var(--petrol-blekk);border-radius:99px;padding:3px 6px;margin-left:4px;vertical-align:1px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--petrol);outline-offset:2px;border-radius:6px}
+section.vis{display:flex;flex-direction:column;gap:22px;padding-top:20px}
+h2{font:700 19px/1.25 var(--display);margin:0;text-wrap:balance}
+.under{color:var(--dempet);font-size:14.5px;margin:3px 0 0}
+p{margin:0}
+.status{font-size:17px;line-height:1.5;max-width:62ch}
+
+/* Tidsaksen */
+.akse{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.akse li{display:grid;grid-template-columns:22px 1fr;column-gap:12px;position:relative;padding-bottom:13px}
+.akse li::before{content:"";position:absolute;left:10px;top:16px;bottom:-2px;width:2px;background:var(--linje)}
+.akse li:last-child{padding-bottom:0}.akse li:last-child::before{display:none}
+.akse li.ferdig::before{background:var(--gronn)}
+.punkt{width:22px;height:22px;border-radius:50%;border:2px solid var(--linje);background:var(--bg);display:grid;place-items:center;font:500 11px/1 var(--mono);color:var(--dempet);position:relative;z-index:1}
+.ferdig .punkt{background:var(--gronn);border-color:var(--gronn);color:var(--bg)}
+.pagar .punkt{border-color:var(--petrol);background:var(--petrol-svak)}
+.pagar .punkt::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--petrol)}
+.akse b{font-weight:600;display:block;line-height:1.3;padding-top:1px}
+.akse small{color:var(--dempet);font-size:13.5px}
+.senere b{color:var(--dempet);font-weight:500}
+@media (min-width:680px){
+  .akse{grid-template-columns:repeat(8,1fr)}
+  .akse li{grid-template-columns:1fr;row-gap:8px;padding:0 8px 0 0}
+  .akse li::before{left:22px;right:0;top:10px;bottom:auto;width:auto;height:2px}
+  .akse b{font-size:13.5px}.akse small{font-size:12px;line-height:1.35;display:block;margin-top:2px}
+}
+
+.gruppe{display:flex;flex-direction:column;gap:10px}
+.gruppehode{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.pille{font:500 11.5px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:5px 8px;border-radius:6px;white-space:nowrap}
+.pille.bidra{background:var(--petrol);color:var(--petrol-blekk)}
+.pille.pagar{background:var(--petrol-svak);color:var(--petrol)}
+.pille.venter{background:var(--rav-svak);color:var(--rav)}
+.pille.senere{background:var(--gra-svak);color:var(--dempet)}
+.steg{background:var(--flate);border:1px solid var(--linje);border-radius:var(--r);padding:14px 16px;display:flex;flex-direction:column;gap:5px;min-width:0}
+.steg h3{font:600 16px/1.3 var(--tekst);margin:0}
+.steg .hvem{font:400 12.5px/1.3 var(--mono);color:var(--dempet)}
+.steg p{font-size:15px;color:var(--blekk);max-width:64ch}
+.gruppe.senere .steg{background:transparent}
+
+.filter{display:flex;gap:6px;flex-wrap:wrap}
+.filter button{font:500 13.5px/1 var(--tekst);color:var(--blekk);background:var(--gra-svak);border:0;border-radius:99px;padding:8px 12px;cursor:pointer}
+.filter button[aria-pressed="true"]{background:var(--petrol);color:var(--petrol-blekk)}
+.logg{display:flex;flex-direction:column}
+article{display:grid;grid-template-columns:1fr;gap:6px;padding:18px 0;border-top:1px solid var(--linje);min-width:0}
+article:first-child{border-top:0;padding-top:4px}
+.linje1{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font:400 12.5px/1 var(--mono);color:var(--dempet)}
+.linje1 .m{color:var(--petrol)}
+.ny{background:var(--rav-svak);color:var(--rav);font-weight:500;border-radius:5px;padding:3px 6px;letter-spacing:.06em}
+article h3{font:700 18px/1.28 var(--display);margin:0;text-wrap:balance}
+article p{max-width:64ch;font-size:15.5px}
+article p+p{margin-top:8px}
+
+.om p{max-width:64ch}.om p+p{margin-top:10px}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:15px}
+dt{color:var(--dempet);font:400 12.5px/1.6 var(--mono)}dd{margin:0;min-width:0}
+@media (max-width:420px){dl{grid-template-columns:1fr;gap:0}dd{margin-bottom:8px}}
+.boks{border:1px solid var(--linje);border-radius:var(--r);padding:14px 16px;background:var(--flate);font-size:15px}
+.app{font-size:14.5px;color:var(--dempet)}
+.varsel{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--petrol);color:var(--petrol-blekk);
+  padding:12px max(16px,env(safe-area-inset-right,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));
+  display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap;font-size:15px}
+.varsel button{font:600 14px/1 var(--tekst);background:var(--petrol-blekk);color:var(--petrol);border:0;border-radius:8px;padding:9px 14px;cursor:pointer}
+footer{margin-top:34px;color:var(--dempet);font:400 12px/1.6 var(--mono)}
+@media (prefers-reduced-motion:no-preference){.pagar .punkt::after{animation:puls 2.4s ease-in-out infinite}}
+@keyframes puls{50%{opacity:.35}}
+</style>
+
+<header class="topp"><div class="ramme">
+  <div class="merke">Prosjektlogg · Helse Midt-Norge</div>
+  <h1>Tid til virkende behandling ved blodbaneinfeksjoner</h1>
+  <nav class="faner" aria-label="Deler">
+    <a href="#na" id="f-na">Nå</a><a href="#logg" id="f-logg">Logg<span class="ant" id="antNy" hidden></span></a><a href="#om" id="f-om">Om prosjektet</a>
+  </nav>
+</div></header>
+
+<main class="ramme">
+  <section class="vis" id="v-na" hidden>
+    <div><p class="status" id="status"></p><p class="under" id="sist"></p></div>
+    <div class="gruppe"><h2>Hvor vi er</h2><ol class="akse" id="akse"></ol></div>
+    <div id="steg" style="display:contents"></div>
+  </section>
+  <section class="vis" id="v-logg" hidden>
+    <div class="filter" id="filter" role="group" aria-label="Vis innlegg om"></div>
+    <div class="logg" id="logg"></div>
+  </section>
+  <section class="vis om" id="v-om" hidden>
+    <div><h2 id="omTittel"></h2></div>
+    <div id="omTekst"></div>
+    <dl id="fakta"></dl>
+    <div class="boks" id="personvern"></div>
+    <p class="app">Legg siden på hjemskjermen for å bruke den som en app: i Safari velger du Del og «Legg til på Hjem-skjerm», i Chrome menyen og «Legg til på startskjermen». Nye innlegg er merket når du åpner den.</p>
+  </section>
+  <p class="boks" id="feil" hidden>Innholdet kunne ikke hentes. Sjekk nettforbindelsen og åpne siden på nytt.</p>
+  <footer id="fot"></footer>
+</main>
+<div class="varsel" id="varsel" hidden><span id="varselTekst">Loggen er oppdatert.</span><button id="varselKnapp">Vis</button></div>
+
+<script>
+(function(){
+const $=id=>document.getElementById(id);
+const el=(t,k,txt)=>{const e=document.createElement(t); if(k) e.className=k; if(txt!=null) e.textContent=txt; return e;};
+const MND=["januar","februar","mars","april","mai","juni","juli","august","september","oktober","november","desember"];
+const dato=s=>{const [a,m,d]=s.slice(0,10).split("-").map(Number); return d+". "+MND[m-1]+" "+a;};
+const GRUPPER=[["bidra","Her kan du bidra","Oppgaver som kan startes nå."],
+               ["pagar","Pågår",""],["venter","Venter på andre",""],["senere","Senere",""]];
+let D=null, merke="Alle", sett=null;
+function les(k){try{return localStorage.getItem(k);}catch(e){return null;}}
+function skriv(k,v){try{localStorage.setItem(k,v);}catch(e){}}
+
+function tegn(){
+  $("status").textContent=D.status;
+  $("sist").textContent="Sist oppdatert "+dato(D.oppdatert);
+  const akse=$("akse"); akse.replaceChildren();
+  D.faser.forEach((f,i)=>{const li=el("li",f.status);
+    li.append(el("span","punkt",f.status==="ferdig"?"✓":f.status==="pagar"?"":String(i+1)));
+    const d=el("div"); d.append(el("b",null,f.navn),el("small",null,f.tekst)); li.append(d); akse.append(li);});
+  const steg=$("steg"); steg.replaceChildren();
+  GRUPPER.forEach(([id,navn,under])=>{const liste=D.steg.filter(s=>s.gruppe===id); if(!liste.length) return;
+    const g=el("div","gruppe "+id); const h=el("div","gruppehode"); h.append(el("h2",null,navn),el("span","pille "+id,liste.length+(liste.length===1?" oppgave":" oppgaver")));
+    g.append(h); if(under) g.append(el("p","under",under));
+    liste.forEach(s=>{const c=el("div","steg"); c.append(el("h3",null,s.tittel),el("span","hvem",s.hvem),el("p",null,s.tekst)); g.append(c);});
+    steg.append(g);});
+  const merker=["Alle",...new Set(D.innlegg.map(p=>p.merke))];
+  const fl=$("filter"); fl.replaceChildren();
+  merker.forEach(m=>{const b=el("button",null,m); b.type="button"; b.setAttribute("aria-pressed",m===merke); b.onclick=()=>{merke=m; tegn();}; fl.append(b);});
+  const logg=$("logg"); logg.replaceChildren(); let nye=0;
+  D.innlegg.slice().sort((a,b)=>b.dato.localeCompare(a.dato)).forEach(p=>{
+    const ny=sett && p.dato>sett; if(ny) nye++;
+    if(merke!=="Alle" && p.merke!==merke) return;
+    const a=el("article"); const l=el("div","linje1");
+    l.append(el("span",null,p.datotekst||dato(p.dato)),el("span","m",p.merke)); if(ny) l.append(el("span","ny","NY"));
+    a.append(l,el("h3",null,p.tittel)); const t=el("div"); p.tekst.forEach(x=>t.append(el("p",null,x))); a.append(t); logg.append(a);});
+  $("antNy").hidden=!nye; $("antNy").textContent=nye;
+  $("omTittel").textContent=D.om.tittel;
+  const ot=$("omTekst"); ot.replaceChildren(); D.om.avsnitt.forEach(x=>ot.append(el("p",null,x)));
+  const fk=$("fakta"); fk.replaceChildren(); D.om.fakta.forEach(([a,b])=>fk.append(el("dt",null,a),el("dd",null,b)));
+  $("personvern").textContent=D.om.personvern;
+  $("fot").textContent="Oppdatert "+dato(D.oppdatert)+" · Ingen pasientopplysninger på denne siden";
+}
+function vis(){
+  const h=(location.hash||"#na").slice(1); const v=["na","logg","om"].includes(h)?h:"na";
+  ["na","logg","om"].forEach(x=>{$("v-"+x).hidden=x!==v||!D; const f=$("f-"+x); if(x===v) f.setAttribute("aria-current","page"); else f.removeAttribute("aria-current");});
+  if(v==="logg"&&D){ const nyeste=D.innlegg.map(p=>p.dato).sort().pop(); skriv("logg-sett",nyeste); }
+  window.scrollTo(0,0);
+}
+async function hent(){ const r=await fetch("innhold.json?t="+Date.now(),{cache:"no-store"}); if(!r.ok) throw new Error(r.status); return r.json(); }
+async function start(){
+  sett=les("logg-sett");
+  try{ D=await hent(); }catch(e){ $("feil").hidden=false; return; }
+  if(!sett){ sett=D.innlegg.map(p=>p.dato).sort().pop(); skriv("logg-sett",sett); }
+  tegn(); vis();
+}
+async function sjekk(){ if(!D||document.hidden) return;
+  try{ const n=await hent(); if(n.oppdatert!==D.oppdatert){ $("varselTekst").textContent=n.melding||"Loggen er oppdatert.";
+    $("varsel").hidden=false; $("varselKnapp").onclick=()=>{ D=n; sett=les("logg-sett")||sett; $("varsel").hidden=true; tegn(); location.hash="#logg"; vis(); }; } }catch(e){} }
+addEventListener("hashchange",vis);
+document.addEventListener("visibilitychange",sjekk);
+setInterval(sjekk,15*60*1000);
+start();
+if("serviceWorker" in navigator){ try{ navigator.serviceWorker.register("sw.js").catch(()=>{}); }catch(e){} }
+})();
+</script>
+</body></html>
