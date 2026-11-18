@@ -186,7 +186,7 @@ function tegn(){
     if(merke!=="Alle" && p.merke!==merke) return;
     const a=el("article"); const l=el("div","linje1");
     l.append(el("span",null,p.datotekst||dato(p.dato)),el("span","m",p.merke)); if(ny) l.append(el("span","ny","NY"));
-    a.append(l,el("h3",null,p.tittel)); const t=el("div"); p.tekst.forEach(x=>t.append(el("p",null,x))); a.append(t); logg.append(a);});
+    a.append(l,el("h3",null,p.tittel)); const t=el("div"); p.tekst.forEach(x=>t.append(el("p",null,x))); if(p.lenke&&/^https:\/\//.test(p.lenke.url)){const k=el("a",null,p.lenke.tekst); k.href=p.lenke.url; k.rel="noopener"; k.target="_blank"; const q=el("p"); q.append(k); t.append(q);} a.append(t); logg.append(a);});
   $("antNy").hidden=!nye; $("antNy").textContent=nye;
   $("omTittel").textContent=D.om.tittel;
   const ot=$("omTekst"); ot.replaceChildren(); D.om.avsnitt.forEach(x=>ot.append(el("p",null,x)));

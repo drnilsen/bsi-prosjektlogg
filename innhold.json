@@ -1,7 +1,7 @@
 {
- "oppdatert": "2026-11-16T14:15",
- "melding": "Nytt testuttrekk er kjørt, og hurtigtesten er tatt inn i verktøyet.",
- "status": "Det andre testuttrekket har med alle sykehusene og resultatene som manglet sist. Tre mangler er meldt tilbake til Helseplattformen. Neste steg er svar derfra og en ny kjøring med siste versjon av verktøyet.",
+ "oppdatert": "2026-11-18T14:00",
+ "melding": "Informasjon til pasientene er publisert, og regler kan nå følge retningslinjen over tid.",
+ "status": "Reglene for empirisk behandling kan nå måles mot retningslinjen slik den var da pasienten ble behandlet, men de fleste tidligere versjonene mangler ennå. Informasjon til pasientene er lagt ut hos Helse Møre og Romsdal. Vi venter på svar fra Helseplattformen og Helsedirektoratet.",
  "faser": [
   {
    "navn": "Godkjenninger",
@@ -16,7 +16,7 @@
   {
    "navn": "Definisjoner og regler",
    "status": "ferdig",
-   "tekst": "Episode, virkende og optimal behandling"
+   "tekst": "Episode, virkende og optimal behandling; regler følger nå retningslinjen over tid"
   },
   {
    "navn": "Analyseverktøy",
@@ -79,7 +79,7 @@
    "gruppe": "venter",
    "tittel": "Tidligere versjoner av retningslinjen",
    "hvem": "Helsedirektoratet",
-   "tekst": "Retningslinjen er revidert i studieperioden. Behandlingen skal vurderes mot den versjonen som gjaldt da pasienten ble behandlet. Kompetansesenteret har ikke arkiverte versjoner og viser til Helsedirektoratet, som nå har fått forespørselen."
+   "tekst": "Helsedirektoratet har sendt retningslinjen slik den var før revisjonen i 2019–2022. Studieperioden starter etter at de fleste kapitlene var revidert, så den dekker bare hud og bløtdel de første ukene. Vi har bedt om versjonene fra 2020–2022 slik de sto før senere endringer. Til de kommer, regnes berørte episoder som ikke vurderbare for dette endepunktet."
   },
   {
    "gruppe": "senere",
@@ -107,12 +107,35 @@
   },
   {
    "gruppe": "venter",
-   "tittel": "Informasjonsside om prosjektet",
-   "hvem": "Forskningsseksjonen i helseforetaket",
-   "tekst": "Tekst til pasienter og pårørende er skrevet og sendt. Siden skal ligge på helseforetakets nettsider før fullt uttrekk bestilles."
+   "tittel": "Informasjon til pasientene ved de andre foretakene",
+   "hvem": "St. Olavs hospital og Helse Nord-Trøndelag",
+   "tekst": "Helse Møre og Romsdal har publisert informasjonen på sine nettsider. De to andre helseforetakene blir bedt om å legge ut den samme teksten."
   }
  ],
  "innlegg": [
+  {
+   "dato": "2026-11-18",
+   "tittel": "Informasjon til pasientene er publisert",
+   "merke": "Godkjenning",
+   "tekst": [
+    "Helse Møre og Romsdal har lagt ut informasjon om prosjektet til pasienter og pårørende. Teksten forklarer hva vi forsker på, hvilke opplysninger som brukes, og hvilke rettigheter den enkelte har.",
+    "St. Olavs hospital og Helse Nord-Trøndelag blir bedt om å legge ut den samme informasjonen."
+   ],
+   "lenke": {
+    "tekst": "Les informasjonen på helse-mr.no",
+    "url": "https://www.helse-mr.no/fag-og-forsking/forsking-og-innovasjon/forskingsaktivitet/antibiotika-blodbaneinfeksjoner/"
+   }
+  },
+  {
+   "dato": "2026-11-18",
+   "tittel": "Retningslinjen har endret seg i studieperioden",
+   "merke": "Definisjoner",
+   "tekst": [
+    "Et av endepunktene er om den første behandlingen fulgte retningslinjen «Antibiotika i sykehus». Retningslinjen er endret flere ganger siden 2022, og vi har bestemt at hver episode skal måles mot anbefalingen som gjaldt den dagen blodkulturen ble tatt.",
+    "Regelfilen har nå gyldighetsdatoer for hvert regime. Der den tidligere anbefalingen ikke er skaffet, blir episoden «ikke vurderbar» i stedet for å bli målt mot en anbefaling som ikke fantes da.",
+    "Helsedirektoratet har sendt retningslinjen slik den var før revisjonen. Den dekker bare ett kapittel i studieperioden. Vi har bedt om resten. Datoene i endringsloggen er kontrollert i en uavhengig gjennomgang."
+   ]
+  },
   {
    "dato": "2026-11-16",
    "tittel": "Hurtigtesten har fått sin plass i modellen",
