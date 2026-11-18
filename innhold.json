@@ -1,7 +1,7 @@
 {
- "oppdatert": "2026-11-18T14:00",
- "melding": "Informasjon til pasientene er publisert, og regler kan nå følge retningslinjen over tid.",
- "status": "Reglene for empirisk behandling kan nå måles mot retningslinjen slik den var da pasienten ble behandlet, men de fleste tidligere versjonene mangler ennå. Informasjon til pasientene er lagt ut hos Helse Møre og Romsdal. Vi venter på svar fra Helseplattformen og Helsedirektoratet.",
+ "oppdatert": "2026-11-18T16:00",
+ "melding": "Mottak i laboratoriet er ikke det samme som innsetting i instrumentet. Tid til positivitet beregnes ikke.",
+ "status": "Tidspunktet for mottak i laboratoriet har fått riktig navn i verktøyet, og vi beregner ikke tid til positivitet. Neste steg er å kjøre siste versjon på testuttrekket og deretter svare Helseplattformen, slik at det fulle uttrekket kan bestilles.",
  "faser": [
   {
    "navn": "Godkjenninger",
@@ -49,13 +49,7 @@
    "gruppe": "pagar",
    "tittel": "Kjøre siste versjon av verktøyet i analyserommet",
    "hvem": "Prosjektleder",
-   "tekst": "Verktøyet er kjørt to ganger på det nye testuttrekket. Siste versjon, der hurtigtest fra positiv flaske teller som første identifikasjon, er prøvd på syntetiske data og skal nå kjøres på testuttrekket."
-  },
-  {
-   "gruppe": "venter",
-   "tittel": "Finne tidspunktet for innsetting i blodkulturinstrumentet",
-   "hvem": "Helseplattformen",
-   "tekst": "Mottakstiden i dataene er registrering i mottak. Der flaskene settes inn bare på faste tidspunkt om natten, er det ikke det samme som innsetting. Vi har spurt om instrumentets tidspunkt finnes i et felt. Vi legger ikke inn beregnede tidspunkt."
+   "tekst": "Siste versjon er prøvd på syntetiske data og skal nå kjøres på testuttrekket. Den har to endringer som ikke er prøvd på reelle data: hurtigtest fra positiv flaske som første identifikasjon, og mottak i laboratoriet skilt fra innsetting i instrumentet."
   },
   {
    "gruppe": "bidra",
@@ -100,10 +94,10 @@
    "tekst": "Bestilles når verktøyet gir riktige svar på testuttrekket."
   },
   {
-   "gruppe": "venter",
-   "tittel": "Rettelser i testuttrekket",
-   "hvem": "Helseplattformen",
-   "tekst": "Det andre testuttrekket har med alle ti sykehus og resultatene for flasker som dyrkes ved et annet sykehus. Tre ting er meldt tilbake: to tomme kolonner for ordinasjon, en mulig radgrense i medikamenttabellen, og at hoveddiagnosen for oppholdet ikke kan skilles ut."
+   "gruppe": "pagar",
+   "tittel": "Svare Helseplattformen før fullt uttrekk",
+   "hvem": "Prosjektleder",
+   "tekst": "Helseplattformen har svart at de tomme kolonnene for ordinasjon skyldtes en feil ved utskrift, og at hoveddiagnosen kan skilles ut med en egen markering for indeksoppholdet. Vi ber i tillegg om diagnoser fra medisinsk historikk, som trengs for å beregne komorbiditet. Spørsmålet om en mulig radgrense i medikamenttabellen er ikke besvart og gjentas."
   },
   {
    "gruppe": "venter",
@@ -113,6 +107,16 @@
   }
  ],
  "innlegg": [
+  {
+   "dato": "2026-11-18",
+   "tittel": "Mottak er ikke innsetting",
+   "merke": "Definisjoner",
+   "tekst": [
+    "Vi trodde at mottakstiden for blodkulturflasken var tidspunktet flasken ble satt inn i instrumentet. Laboratoriet ved St. Olavs hospital har avklart at det er en manuell registrering i mottak, før innsetting. Tidspunktet for innsetting finnes ikke som eget felt for alle laboratoriene.",
+    "Studien bruker derfor «mottak» for det det er. Tiden fra mottak til flaskesignal inneholder ventetid før innsetting og omtales ikke som tid til positivitet. Vi legger ikke inn beregnede tidspunkt. Tiden fra prøvetaking til flaskesignal, som hovedanalysene bygger på, er ikke berørt.",
+    "Korrespondansen med Helseplattformen og laboratoriene føres nå i en egen logg sammen med beslutningsloggen."
+   ]
+  },
   {
    "dato": "2026-11-18",
    "tittel": "Informasjon til pasientene er publisert",
