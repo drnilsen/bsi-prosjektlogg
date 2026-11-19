@@ -1,7 +1,7 @@
 {
- "oppdatert": "2026-11-18T16:00",
- "melding": "Mottak i laboratoriet er ikke det samme som innsetting i instrumentet. Tid til positivitet beregnes ikke.",
- "status": "Tidspunktet for mottak i laboratoriet har fått riktig navn i verktøyet, og vi beregner ikke tid til positivitet. Neste steg er å kjøre siste versjon på testuttrekket og deretter svare Helseplattformen, slik at det fulle uttrekket kan bestilles.",
+ "oppdatert": "2026-11-19T16:00",
+ "melding": "Siste versjon er kjørt på testuttrekket. Vi har bedt om de siste tilleggene før fullt uttrekk.",
+ "status": "Verktøyet er kjørt på testuttrekket med hurtigtest som første identifikasjon, og det virker som forventet. Vi har svart Helseplattformen og bedt om tre tillegg før fullt uttrekk: en markering av diagnosene fra indeksoppholdet, diagnoser fra medisinsk historikk og resultatene fra ESBL-konfirmasjonstesten.",
  "faser": [
   {
    "navn": "Godkjenninger",
@@ -47,9 +47,9 @@
  "steg": [
   {
    "gruppe": "pagar",
-   "tittel": "Kjøre siste versjon av verktøyet i analyserommet",
+   "tittel": "Kontrollkjøring etter nye resistenskomponenter",
    "hvem": "Prosjektleder",
-   "tekst": "Siste versjon er prøvd på syntetiske data og skal nå kjøres på testuttrekket. Den har to endringer som ikke er prøvd på reelle data: hurtigtest fra positiv flaske som første identifikasjon, og mottak i laboratoriet skilt fra innsetting i instrumentet."
+   "tekst": "Kjøringen på testuttrekket viste resistenskomponenter som regelfilen ikke kjente igjen. De er lagt inn, og verktøyet kjøres én gang til for å bekrefte at alle nå leses."
   },
   {
    "gruppe": "bidra",
@@ -94,10 +94,10 @@
    "tekst": "Bestilles når verktøyet gir riktige svar på testuttrekket."
   },
   {
-   "gruppe": "pagar",
-   "tittel": "Svare Helseplattformen før fullt uttrekk",
-   "hvem": "Prosjektleder",
-   "tekst": "Helseplattformen har svart at de tomme kolonnene for ordinasjon skyldtes en feil ved utskrift, og at hoveddiagnosen kan skilles ut med en egen markering for indeksoppholdet. Vi ber i tillegg om diagnoser fra medisinsk historikk, som trengs for å beregne komorbiditet. Spørsmålet om en mulig radgrense i medikamenttabellen er ikke besvart og gjentas."
+   "gruppe": "venter",
+   "tittel": "Siste tillegg før fullt uttrekk",
+   "hvem": "Helseplattformen og St. Olavs hospital",
+   "tekst": "Vi har bedt om en markering av diagnosene fra indeksoppholdet, diagnoser fra medisinsk historikk og resultatene fra ESBL-konfirmasjonstesten. Laboratoriet angir hvilke analyser som viser ESBL. Spørsmålet om en mulig radgrense i medikamenttabellen står fortsatt åpent."
   },
   {
    "gruppe": "venter",
@@ -107,6 +107,16 @@
   }
  ],
  "innlegg": [
+  {
+   "dato": "2026-11-19",
+   "tittel": "Hurtigtesten virker, og ESBL mangler i uttrekket",
+   "merke": "Testuttrekk",
+   "tekst": [
+    "Siste versjon av verktøyet er kjørt på testuttrekket. Hurtigtest fra positiv flaske teller nå som første identifikasjon når den påviser agenset på arts- eller slektsnivå, og tiden til første identifikasjon blir kortere der slike tester brukes.",
+    "Kjøringen viste to mangler. Regelfilen kjente ikke igjen alle resistenskomponentene laboratoriene bruker; de er nå lagt inn og kontrolleres med en egen test. Og ESBL kan ikke leses fra resistensbestemmelsen alene, fordi funnet gis i en egen konfirmasjonstest som ikke var med i uttrekket. Den er bestilt.",
+    "Tidspunktet for mottak i laboratoriet viste seg å ligge tett på prøvetakingen ved alle sykehus. Det sier derfor lite om transport og er tatt ut som forklaringsvariabel i analysene. Det vises fortsatt i beskrivelsen av flyten."
+   ]
+  },
   {
    "dato": "2026-11-18",
    "tittel": "Mottak er ikke innsetting",
