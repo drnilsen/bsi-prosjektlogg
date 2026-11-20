@@ -1,7 +1,7 @@
 {
- "oppdatert": "2026-11-19T16:00",
- "melding": "Siste versjon er kjørt på testuttrekket. Vi har bedt om de siste tilleggene før fullt uttrekk.",
- "status": "Verktøyet er kjørt på testuttrekket med hurtigtest som første identifikasjon, og det virker som forventet. Vi har svart Helseplattformen og bedt om tre tillegg før fullt uttrekk: en markering av diagnosene fra indeksoppholdet, diagnoser fra medisinsk historikk og resultatene fra ESBL-konfirmasjonstesten.",
+ "oppdatert": "2026-11-20T15:30",
+ "melding": "Det meste er avklart før fullt uttrekk. ESBL defineres fra resistensbestemmelsen.",
+ "status": "Helseplattformen har bekreftet at ordinasjonstider, markering av indeksoppholdet og diagnoser fra medisinsk historikk kommer med i det fulle uttrekket. ESBL defineres ut fra resistensbestemmelsen, likt for alle laboratoriene. Ett spørsmål om legemiddeltabellen gjenstår før uttrekket kan bestilles.",
  "faser": [
   {
    "navn": "Godkjenninger",
@@ -73,7 +73,7 @@
    "gruppe": "venter",
    "tittel": "Tidligere versjoner av retningslinjen",
    "hvem": "Helsedirektoratet",
-   "tekst": "Helsedirektoratet har sendt retningslinjen slik den var før revisjonen i 2019–2022. Studieperioden starter etter at de fleste kapitlene var revidert, så den dekker bare hud og bløtdel de første ukene. Vi har bedt om versjonene fra 2020–2022 slik de sto før senere endringer. Til de kommer, regnes berørte episoder som ikke vurderbare for dette endepunktet."
+   "tekst": "Helsedirektoratet har ikke pålitelig versjonshistorikk for retningslinjen. Vi har sendt en prioritert liste over åtte anbefalinger der vi trenger teksten slik den sto før endringen, med pneumoni og endokarditt først."
   },
   {
    "gruppe": "senere",
@@ -95,18 +95,28 @@
   },
   {
    "gruppe": "venter",
-   "tittel": "Siste tillegg før fullt uttrekk",
-   "hvem": "Helseplattformen og St. Olavs hospital",
-   "tekst": "Vi har bedt om en markering av diagnosene fra indeksoppholdet, diagnoser fra medisinsk historikk og resultatene fra ESBL-konfirmasjonstesten. Laboratoriet angir hvilke analyser som viser ESBL. Spørsmålet om en mulig radgrense i medikamenttabellen står fortsatt åpent."
+   "tittel": "Siste avklaring om legemiddeltabellen",
+   "hvem": "Helseplattformen",
+   "tekst": "Uttrekket henter legemidler etter ATC-kode. Vi har bedt om en kontroll av at infusjoner og andre tilberedninger uten slik kode ikke faller ut, siden tid til behandling regnes fra de første dosene."
   },
   {
    "gruppe": "venter",
    "tittel": "Informasjon til pasientene ved de andre foretakene",
    "hvem": "St. Olavs hospital og Helse Nord-Trøndelag",
-   "tekst": "Helse Møre og Romsdal har publisert informasjonen på sine nettsider. De to andre helseforetakene blir bedt om å legge ut den samme teksten."
+   "tekst": "Helse Møre og Romsdal og Helse Nord-Trøndelag har publisert informasjonen på sine nettsider. St. Olavs hospital gjenstår."
   }
  ],
  "innlegg": [
+  {
+   "dato": "2026-11-20",
+   "tittel": "ESBL defineres fra resistensbestemmelsen",
+   "merke": "Definisjoner",
+   "tekst": [
+    "Vi undersøkte om resultatet fra laboratorienes ESBL-konfirmasjonstest kunne hentes ut. Testene er ikke koblet til det enkelte isolatet, og rutinene for hvordan funnet gis ut, varierer mellom laboratoriene.",
+    "Studien definerer derfor ESBL ut fra resistensbestemmelsen: Enterobacterales utenom AmpC-artene som ikke er følsomme for tredjegenerasjons cefalosporiner. Regelen blir lik for alle sykehus, og det er viktigere i en studie som sammenligner sykehus enn at mekanismen er bekreftet i hvert tilfelle. Detaljene i regelen er et forslag som skal bekreftes.",
+    "Hoveddiagnosen for oppholdet hentes fra diagnosen som er satt på kontakten. Diagnosen som rapporteres til Norsk pasientregister, er ikke tilgjengelig i rapporteringsdatabasen ennå. Dette føres som en begrensning i metoden."
+   ]
+  },
   {
    "dato": "2026-11-19",
    "tittel": "Hurtigtesten virker, og ESBL mangler i uttrekket",
