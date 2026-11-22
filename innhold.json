@@ -1,7 +1,7 @@
 {
- "oppdatert": "2026-11-20T15:30",
- "melding": "Det meste er avklart før fullt uttrekk. ESBL defineres fra resistensbestemmelsen.",
- "status": "Helseplattformen har bekreftet at ordinasjonstider, markering av indeksoppholdet og diagnoser fra medisinsk historikk kommer med i det fulle uttrekket. ESBL defineres ut fra resistensbestemmelsen, likt for alle laboratoriene. Ett spørsmål om legemiddeltabellen gjenstår før uttrekket kan bestilles.",
+ "oppdatert": "2026-11-22T16:15",
+ "melding": "Ny plan for klinisk validering av regelsettet: et panel av vurderere, i to runder.",
+ "status": "Planen for klinisk validering av regelsettet er lagt om. Et panel av mikrobiologer og infeksjonsmedisinere skal vurdere reelle forløp i to runder: først for å forbedre regelsettet, deretter for å måle hvor godt det ferdige regelsettet stemmer med klinisk vurdering. En pilot av verktøyet er laget på syntetiske data.",
  "faser": [
   {
    "navn": "Godkjenninger",
@@ -76,10 +76,10 @@
    "tekst": "Helsedirektoratet har ikke pålitelig versjonshistorikk for retningslinjen. Vi har sendt en prioritert liste over åtte anbefalinger der vi trenger teksten slik den sto før endringen, med pneumoni og endokarditt først."
   },
   {
-   "gruppe": "senere",
-   "tittel": "Verktøy for blindet klassifisering",
-   "hvem": "To kliniske mikrobiologer",
-   "tekst": "Et utvalg episoder klassifiseres manuelt uten kjennskap til regelmotorens svar. Slik valideres reglene."
+   "gruppe": "pagar",
+   "tittel": "Verktøy for klinisk validering",
+   "hvem": "Prosjektleder",
+   "tekst": "En pilot er laget og prøvd på syntetiske data. Vurdereren ser først pasienten og første behandling uten mikrobe og resistens, deretter hele forløpet, og krysser av for om hvert regime var virkende og optimalt. I første runde vises regelmotorens vurdering etterpå, slik at uenighet kan begrunnes. Sykehus og datoer vises ikke."
   },
   {
    "gruppe": "senere",
@@ -107,6 +107,17 @@
   }
  ],
  "innlegg": [
+  {
+   "dato": "2026-11-22",
+   "tittel": "Klinisk validering i to runder",
+   "merke": "Validering",
+   "tekst": [
+    "Den opprinnelige planen var at to mikrobiologer skulle klassifisere et utvalg episoder blindet. Vi går i stedet for et panel på minst fire og helst åtte vurderere, både mikrobiologer og infeksjonsmedisinere, og deler arbeidet i to runder med ulikt formål.",
+    "Første runde skal forbedre regelsettet. Vurdereren gir sin egen vurdering først og får deretter se regelmotorens. Der de er uenige, begrunner vurdereren hvorfor. Andre runde skal måle det ferdige regelsettet på nye forløp, uten at regelmotorens vurdering vises. Noen av vurdererne deltar bare i andre runde, slik at vi kan se om regelmotoren stemmer like godt med kolleger som ikke har vært med på å justere den.",
+    "Vurderingen gjøres mot nasjonal retningslinje og resistenssvar. Dose vurderes ikke. Diagnosekodene settes ved utskrivning og viser ikke nødvendigvis hva som var kjent da behandlingen startet. Det beskrives som en svakhet i metoden.",
+    "Foreløpige resultater som sammenligner sykehus, vises ikke utenfor prosjektgruppen før regelsettet er validert."
+   ]
+  },
   {
    "dato": "2026-11-20",
    "tittel": "ESBL defineres fra resistensbestemmelsen",
