@@ -1,7 +1,7 @@
 {
- "oppdatert": "2026-11-22T16:15",
- "melding": "Ny plan for klinisk validering av regelsettet: et panel av vurderere, i to runder.",
- "status": "Planen for klinisk validering av regelsettet er lagt om. Et panel av mikrobiologer og infeksjonsmedisinere skal vurdere reelle forløp i to runder: først for å forbedre regelsettet, deretter for å måle hvor godt det ferdige regelsettet stemmer med klinisk vurdering. En pilot av verktøyet er laget på syntetiske data.",
+ "oppdatert": "2026-11-23T15:45",
+ "melding": "Første behandling vurderes nå mot retningslinjen i seks grupper, og valideringsverktøyet er bygget om etter første prøving.",
+ "status": "Regelmotoren vurderer nå også behandlingen som ble gitt før første mikrobiologiske svar, mot nasjonal retningslinje. Valideringsverktøyet er prøvd av prosjektleder og bygget om etter tilbakemeldingene. Neste steg er ny prøving, og en faglig gjennomgang av hvordan retningslinjens alternativer er sortert.",
  "faser": [
   {
    "navn": "Godkjenninger",
@@ -47,9 +47,9 @@
  "steg": [
   {
    "gruppe": "pagar",
-   "tittel": "Kontrollkjøring etter nye resistenskomponenter",
+   "tittel": "Ny prøving av valideringsverktøyet",
    "hvem": "Prosjektleder",
-   "tekst": "Kjøringen på testuttrekket viste resistenskomponenter som regelfilen ikke kjente igjen. De er lagt inn, og verktøyet kjøres én gang til for å bekrefte at alle nå leses."
+   "tekst": "Verktøyet er bygget om etter første prøving. Prosjektleder prøver den nye utgaven på testuttrekket før panelet får det."
   },
   {
    "gruppe": "bidra",
@@ -107,6 +107,18 @@
   }
  ],
  "innlegg": [
+  {
+   "dato": "2026-11-23",
+   "tittel": "Første behandling i seks grupper",
+   "merke": "Regelsett",
+   "tekst": [
+    "Behandlingen som gis før noe mikrobiologisk svar foreligger, ble tidligere vurdert som enten i tråd med retningslinjen eller ikke. Det skiller dårlig mellom et likeverdig alternativ og et valg uten grunnlag. Regelmotoren deler nå første behandling i seks grupper: standardregimet, alternativ som retningslinjen fører opp uten vilkår, alternativ der vilkåret er oppfylt, alternativ der vilkåret ikke er oppfylt, behandling som ikke står i retningslinjen, og tilfeller der dataene ikke gir grunnlag for å avgjøre det.",
+    "Et alternativ uten vilkår regnes som like riktig som standardregimet. «Når aminoglykosid bør unngås» er et vilkår, og det regnes som oppfylt ved eGFR under 30, ved eGFR 30–59 hos pasienter på 80 år eller mer, ved sjokk, etter organtransplantasjon og ved graviditet i andre eller tredje trimester. Nyretoksiske legemidler kan vi ikke se i dataene. Det føres som en kjent begrensning.",
+    "Regelmotoren vurderer hvert regime slik det ble gitt, og velger ikke ut det beste når behandlingen endres før første svar.",
+    "Valideringsverktøyet er endret etter første prøving. Om et middel virker mot mikroben, hentes nå rett fra resistensbestemmelsen, slik at vurdereren slipper å krysse av fra en tabell som står rett over. Vurdereren svarer bare der midlet ikke er resistensbestemt. Før mikroben er kjent, spørres det om behandlingen er i tråd med retningslinjen; etterpå spørres det om den er optimal. Regelmotorens begrunnelser er skrevet om til vanlig språk.",
+    "Nyrefunksjonen følges nå gjennom forløpet i en egen beregning ved siden av den gjeldende, der bare verdien ved prøvetaking brukes. Formålet er å se hvor mye en slik endring betyr før den eventuelt tas i bruk."
+   ]
+  },
   {
    "dato": "2026-11-22",
    "tittel": "Klinisk validering i to runder",
