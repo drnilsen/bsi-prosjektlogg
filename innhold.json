@@ -1,7 +1,7 @@
 {
- "oppdatert": "2026-11-23T15:45",
- "melding": "Første behandling vurderes nå mot retningslinjen i seks grupper, og valideringsverktøyet er bygget om etter første prøving.",
- "status": "Regelmotoren vurderer nå også behandlingen som ble gitt før første mikrobiologiske svar, mot nasjonal retningslinje. Valideringsverktøyet er prøvd av prosjektleder og bygget om etter tilbakemeldingene. Neste steg er ny prøving, og en faglig gjennomgang av hvordan retningslinjens alternativer er sortert.",
+ "oppdatert": "2026-11-24T15:30",
+ "melding": "Alvorlighet vurderes nå ut fra det legen kunne se da behandlingen startet, ikke ut fra at blodkulturen senere ble positiv.",
+ "status": "Reglene for hvordan første behandling vurderes mot nasjonal retningslinje er gjennomgått punkt for punkt. Den viktigste endringen er at alvorlighet nå vurderes ut fra kliniske tegn rundt prøvetaking. Beslutningene er ført, men ikke bygget inn i regelmotoren ennå.",
  "faser": [
   {
    "navn": "Godkjenninger",
@@ -107,6 +107,19 @@
   }
  ],
  "innlegg": [
+  {
+   "dato": "2026-11-24",
+   "tittel": "Hva visste legen da behandlingen startet?",
+   "merke": "Regelsett",
+   "tekst": [
+    "Alle pasientene i studien har bakteriemi. Hittil har regelsettet derfor regnet alle som alvorlig syke, og godtatt de brede regimene i retningslinjens sepsiskapittel for alle. Det er en svakhet: legen som valgte behandling, visste ikke at blodkulturen kom til å bli positiv.",
+    "Alvorlighet vurderes nå ut fra tegn rundt prøvetaking, i tre nivåer. Nivå 0 er ingen tegn. Nivå 1 er minst ett av NEWS2 på 5 eller mer, systolisk blodtrykk under 90, laktat over 2, vasopressor, eller opphold på intensiv eller overvåkning innen 24 timer. Nivå 2 er vasopressor, eller NEWS2 på 7 eller mer sammen med lavt blodtrykk eller høy laktat. De samme nivåene brukes overalt der retningslinjen skiller på alvorlighet.",
+    "På nivå 0 gjelder retningslinjens organkapittel. På nivå 1 godtas både organkapittelet og sepsiskapittelet. På nivå 2 gjelder bare sepsiskapittelet. Mangler NEWS2 og de andre tegnene, godtas begge. Den gamle regelen, der bakteriemi alltid teller som alvorlig, beholdes som sensitivitetsanalyse.",
+    "Samme tankegang gjelder aminoglykosid. En dose regnes som avvik bare når grunnen til å la være var synlig på forhånd: en eGFR under 30 som var svart ut minst én time før dosen, kjent kronisk nyresvikt, eller tegn på sirkulasjonssvikt før dosen.",
+    "Der retningslinjen knytter et alternativ til en klinisk mistanke, for eksempel om anaerob infeksjon, bruker vi diagnosekoder som støtter mistanken, slik som sår eller lokalisasjon. Finnes ingen slik kode, sier vi ikke at valget var feil, bare at det ikke kan avgjøres.",
+    "En begrensning følger med og skal stå i manus: fokus leses av diagnosekoder satt ved utskrivning. Da behandlingen startet, kan fokus ha vært uklart."
+   ]
+  },
   {
    "dato": "2026-11-23",
    "tittel": "Første behandling i seks grupper",
