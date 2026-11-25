@@ -1,7 +1,7 @@
 {
- "oppdatert": "2026-11-24T15:30",
- "melding": "Alvorlighet vurderes nå ut fra det legen kunne se da behandlingen startet, ikke ut fra at blodkulturen senere ble positiv.",
- "status": "Reglene for hvordan første behandling vurderes mot nasjonal retningslinje er gjennomgått punkt for punkt. Den viktigste endringen er at alvorlighet nå vurderes ut fra kliniske tegn rundt prøvetaking. Beslutningene er ført, men ikke bygget inn i regelmotoren ennå.",
+ "oppdatert": "2026-11-25T16:30",
+ "melding": "Det fulle uttrekket er mottatt og kartlagt. Analyseverktøyet er tilpasset det og kjøres på reelle data som neste trinn.",
+ "status": "Det fulle uttrekket fra Helseplattformen er levert til analyserommet. Strukturen er kartlagt, og analyseverktøyet er tilpasset de nye filene. Reglene som ble besluttet de siste dagene, er bygget inn og kontrollert mot syntetiske data med kjent fasit. Ingen resultater foreligger ennå.",
  "faser": [
   {
    "navn": "Godkjenninger",
@@ -21,17 +21,17 @@
   {
    "navn": "Analyseverktøy",
    "status": "pagar",
-   "tekst": "Kjørt på nytt testuttrekk; hurtigtest og reinnleggelse lagt inn"
+   "tekst": "Tilpasset det fulle uttrekket; nyrefunksjon og sirkulasjon følges over tid"
   },
   {
    "navn": "Testuttrekk",
-   "status": "pagar",
-   "tekst": "Andre uttrekk kontrollert; tre mangler meldt tilbake"
+   "status": "ferdig",
+   "tekst": "To testuttrekk kontrollert før det fulle uttrekket ble levert"
   },
   {
    "navn": "Fullt uttrekk",
-   "status": "senere",
-   "tekst": "Alle episoder siden Helseplattformen ble innført"
+   "status": "pagar",
+   "tekst": "Mottatt og kartlagt; analyseverktøyet er ikke kjørt på det ennå"
   },
   {
    "navn": "Analyse",
@@ -49,7 +49,7 @@
    "gruppe": "pagar",
    "tittel": "Ny prøving av valideringsverktøyet",
    "hvem": "Prosjektleder",
-   "tekst": "Verktøyet er bygget om etter første prøving. Prosjektleder prøver den nye utgaven på testuttrekket før panelet får det."
+   "tekst": "Verktøyet viser nå det reglene bruker: alvorlighetsnivå, når kreatininsvarene forelå, og hva som var kjent før oppholdet. Det prøves på reelle data når første kjøring av analyseverktøyet er gjennomgått."
   },
   {
    "gruppe": "bidra",
@@ -88,10 +88,10 @@
    "tekst": "Definisjonsbeslutningene skrives inn i protokollen, og endringen meldes til REK der det kreves."
   },
   {
-   "gruppe": "senere",
-   "tittel": "Fullt uttrekk og hovedanalyse",
-   "hvem": "Prosjektgruppen",
-   "tekst": "Bestilles når verktøyet gir riktige svar på testuttrekket."
+   "gruppe": "pagar",
+   "tittel": "Første kjøring på det fulle uttrekket",
+   "hvem": "Prosjektleder",
+   "tekst": "Uttrekket er mottatt og strukturen kartlagt. Neste trinn er å kjøre analyseverktøyet på det og gå gjennom kjøreloggen. Vi venter ukjente navn på organismer og resistenskomponenter fra laboratoriene, og retter regelfilene etter det. Hovedanalysen kommer først når regelsettet er validert."
   },
   {
    "gruppe": "venter",
@@ -107,6 +107,18 @@
   }
  ],
  "innlegg": [
+  {
+   "dato": "2026-11-25",
+   "tittel": "Det fulle uttrekket er mottatt",
+   "merke": "Data",
+   "tekst": [
+    "Helseplattformen har levert det fulle uttrekket til analyserommet, med et følgebrev som beskriver filene. Før noe ble kjørt, leste vi brevet opp mot verktøyene våre. Det lønte seg: flere filer hadde fått nye navn, og kartleggingsskriptet ville ha lest tre ulike filer som samme tabell uten å si fra.",
+    "Kartleggingen viser at uttrekket henger sammen. Alle opphold har laboratoriedata, og resistensbestemmelsene finner sin dyrkning. Diagnosene dekker nå hele pasientens historikk, ikke bare oppholdet. Det gir bedre grunnlag for komorbiditet, men krever at vi skiller tydelig mellom diagnoser satt på selve oppholdet og diagnoser fra andre kontakter.",
+    "Tre regler er besluttet på grunnlag av kartleggingen. Oppholdets diagnoser er de som er registrert på selve oppholdet. Medisinsk historikk uten dato regnes som kjent da behandlingen ble valgt, fordi legen får den presentert når pasienten tas imot. ESBL leses fortsatt fra resistens mot tredjegenerasjons cefalosporiner, siden laboratorienes egen ESBL-markering sjelden er fylt ut.",
+    "Beregningen av optimal behandling følger nå nyrefunksjon og sirkulasjon gjennom hele forløpet. En aminoglykosiddose regnes ikke som feil når den ble gitt før lav nyrefunksjon var kjent. Den regnes som ikke optimal når pasienten hadde fått vasopressor de siste 72 timene eller hadde lavt blodtrykk de siste 6 timene før dosen.",
+    "Verktøyet er prøvd på et syntetisk datasett i samme størrelse som det fulle uttrekket. Neste trinn er første kjøring på reelle data. Foreløpige tall deles ikke før regelsettet er validert."
+   ]
+  },
   {
    "dato": "2026-11-24",
    "tittel": "Hva visste legen da behandlingen startet?",
