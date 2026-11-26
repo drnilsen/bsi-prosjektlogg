@@ -1,7 +1,7 @@
 {
- "oppdatert": "2026-11-25T16:30",
- "melding": "Det fulle uttrekket er mottatt og kartlagt. Analyseverktøyet er tilpasset det og kjøres på reelle data som neste trinn.",
- "status": "Det fulle uttrekket fra Helseplattformen er levert til analyserommet. Strukturen er kartlagt, og analyseverktøyet er tilpasset de nye filene. Reglene som ble besluttet de siste dagene, er bygget inn og kontrollert mot syntetiske data med kjent fasit. Ingen resultater foreligger ennå.",
+ "oppdatert": "2026-11-26T15:50",
+ "melding": "Reglene for første antibiotikavalg er kontrollert mot hele gjeldende retningslinje. Rettelsene er besluttet og bygges inn før validering.",
+ "status": "Det fulle uttrekket er mottatt og kartlagt, og analyseverktøyet kjøres på det i analyserommet. Samtidig er reglene for første antibiotikavalg kontrollert mot hele teksten i gjeldende retningslinje. Kontrollen fant feil som nå rettes, og alvorlighetsvurderingen er lagt om til fire trinn. Rettelsene er besluttet, men ikke bygget inn ennå. Ingen resultater foreligger.",
  "faser": [
   {
    "navn": "Godkjenninger",
@@ -15,13 +15,13 @@
   },
   {
    "navn": "Definisjoner og regler",
-   "status": "ferdig",
-   "tekst": "Episode, virkende og optimal behandling; regler følger nå retningslinjen over tid"
+   "status": "pagar",
+   "tekst": "Reglene for første antibiotikavalg er kontrollert mot full retningslinjetekst; rettelser er besluttet"
   },
   {
    "navn": "Analyseverktøy",
    "status": "pagar",
-   "tekst": "Tilpasset det fulle uttrekket; nyrefunksjon og sirkulasjon følges over tid"
+   "tekst": "Tilpasset det fulle uttrekket; de nye reglene for første antibiotikavalg bygges inn som neste trinn"
   },
   {
    "navn": "Testuttrekk",
@@ -31,7 +31,7 @@
   {
    "navn": "Fullt uttrekk",
    "status": "pagar",
-   "tekst": "Mottatt og kartlagt; analyseverktøyet er ikke kjørt på det ennå"
+   "tekst": "Mottatt og kartlagt; første kjøring pågår i analyserommet"
   },
   {
    "navn": "Analyse",
@@ -107,6 +107,19 @@
   }
  ],
  "innlegg": [
+  {
+   "dato": "2026-11-26",
+   "tittel": "Reglene kontrollert mot hele retningslinjen",
+   "merke": "Regler",
+   "tekst": [
+    "Mens analyseverktøyet gikk på det fulle uttrekket, begynte vi på en oppsummering av klassifiseringsgrepene til infeksjonskollegiet. Allerede det første eksempelet viste en feil tolkning: vi hadde regnet alternative regimer uten oppgitt vilkår som like riktige som standardbehandlingen. Slik skal ikke retningslinjen leses. Alt som ikke er standardbehandling, forutsetter en grunn, og grunnene står under «Spesielle hensyn».",
+    "Det førte til en gjennomgang rad for rad, og deretter til en full kontroll av regelfilen mot hele gjeldende retningslinje som PDF. Kontrollen fant flere feil enn ventet, særlig i regimene ved penicillinallergi, der et av midlene i en kombinasjon manglet. Årsaken var at reglene opprinnelig ble lagt inn fra oppsummeringer av nettsidene og ikke fra full tekst. Kontrollen er nå gjort med skript som kan kjøres på nytt, også mot eldre utgaver.",
+    "Alvorlighetsvurderingen er lagt om til fire trinn som følger stigen fra ikke mistenkt sepsis, via mulig sepsis og sepsis, til sirkulasjonssvikt eller septisk sjokk. Trinnet settes fra det som var kjent da behandlingen startet. Det avgjør hvilke anbefalinger legen kunne velge fra: organkapittelet for de minst syke, sepsisanbefalingene for de sykere, og bare anbefalingen for septisk sjokk på øverste trinn.",
+    "Fokus for infeksjonen settes ved utskrivning og var ofte ukjent ved innkomst. Derfor godtas anbefalingen for sepsis med ukjent fokus ved første behandling uansett endelig fokus, så lenge pasienten var syk nok til å høre hjemme i en sepsisanbefaling. Etter at mikroben er identifisert, gjelder den ikke lenger.",
+    "Et prinsipp ble slått fast underveis: studien måler mot retningslinjen slik den gjaldt på tidspunktet, verken strengere eller mildere. Der vi velger noe annet, skal det stå som en uttrykkelig beslutning.",
+    "Ingen av rettelsene er bygget inn ennå. De er ført i beslutningsloggen og i en byggeliste, og resten av funnene avklares ett for ett før byggingen starter. Dokumentet til infeksjonskollegiet skrives om når reglene er på plass."
+   ]
+  },
   {
    "dato": "2026-11-25",
    "tittel": "Det fulle uttrekket er mottatt",
