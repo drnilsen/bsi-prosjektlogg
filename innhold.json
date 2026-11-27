@@ -1,7 +1,7 @@
 {
- "oppdatert": "2026-11-26T15:50",
- "melding": "Reglene for første antibiotikavalg er kontrollert mot hele gjeldende retningslinje. Rettelsene er besluttet og bygges inn før validering.",
- "status": "Det fulle uttrekket er mottatt og kartlagt, og analyseverktøyet kjøres på det i analyserommet. Samtidig er reglene for første antibiotikavalg kontrollert mot hele teksten i gjeldende retningslinje. Kontrollen fant feil som nå rettes, og alvorlighetsvurderingen er lagt om til fire trinn. Rettelsene er besluttet, men ikke bygget inn ennå. Ingen resultater foreligger.",
+ "oppdatert": "2026-11-27T14:00",
+ "melding": "Gjennomgangen av reglene mot retningslinjen er ferdig. Byggingen har startet, med alvorlighet i fire trinn som første del.",
+ "status": "Reglene for første antibiotikavalg er gått gjennom mot hele teksten i gjeldende retningslinje, og alle rettelser er besluttet. Byggingen skjer i seks trinn med kontroll mellom hvert. Første trinn, alvorlighet i fire trinn, er ferdig og kontrollert mot syntetiske data med kjent fasit. Ingen resultater foreligger.",
  "faser": [
   {
    "navn": "Godkjenninger",
@@ -16,12 +16,12 @@
   {
    "navn": "Definisjoner og regler",
    "status": "pagar",
-   "tekst": "Reglene for første antibiotikavalg er kontrollert mot full retningslinjetekst; rettelser er besluttet"
+   "tekst": "Gjennomgangen mot full retningslinjetekst er ferdig; rettelsene bygges inn"
   },
   {
    "navn": "Analyseverktøy",
    "status": "pagar",
-   "tekst": "Tilpasset det fulle uttrekket; de nye reglene for første antibiotikavalg bygges inn som neste trinn"
+   "tekst": "Bygges om i seks trinn; alvorlighet i fire trinn er på plass"
   },
   {
    "navn": "Testuttrekk",
@@ -107,6 +107,18 @@
   }
  ],
  "innlegg": [
+  {
+   "dato": "2026-11-27",
+   "tittel": "Gjennomgangen er ferdig, byggingen har startet",
+   "merke": "Regler",
+   "tekst": [
+    "Resten av funnene fra kontrollen mot retningslinjen er avklart, ett for ett. Flere diagnoser som tidligere lå samlet, får nå egne regler fordi retningslinjen har egne anbefalinger for dem: leverabscess, gastroenteritt, infeksjon ved brudd og implantater, og de fem vanligste infeksjonene i buken. Begrunnelsen er at legen som regel kan skille dem tidlig, selv om regimene ligner.",
+    "Noen regimer i retningslinjen forutsetter at mikroben er kjent, for eksempel ved toksisk sjokk. De regnes ikke som riktig første valg før mikroben faktisk er identifisert, men vurderes fra det tidspunktet. En diagnosekode for sjokk satt ved utskrivning teller heller ikke. Sirkulasjonssvikten må kunne gjenfinnes i målingene fra tiden da behandlingen ble valgt.",
+    "På ett punkt er studien bevisst strengere enn teksten: en pasient med sirkulasjonssvikt skal ikke ha aminoglykosid, heller ikke der retningslinjen nevner det i en anbefaling for sjokk. Slike valg står som uttrykkelige beslutninger og vil bli beskrevet i metoden.",
+    "Bittskader kunne ikke leses fra dataene før. Nå brukes diagnosekode der den finnes, og funn av noen få mikrober som er typiske for dyrebitt, som tegn på at det forelå et bitt.",
+    "Byggingen er delt i seks trinn, med kontroll mellom hvert. Første trinn er ferdig: alvorlighet i fire trinn, satt fra det som var kjent da behandlingen startet. Det er kontrollert mot håndsatte eksempler og mot syntetiske data med kjent fasit. De neste trinnene tar reglene for aminoglykosid, selve regelfilen, valideringsverktøyet og til slutt en uavhengig gjennomgang."
+   ]
+  },
   {
    "dato": "2026-11-26",
    "tittel": "Reglene kontrollert mot hele retningslinjen",
